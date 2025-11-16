@@ -1,0 +1,36 @@
+.gallery-container {
+  width: 100%;
+  padding: 4rem 1rem; // padding أقل على الجوانب
+  background-color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #0a192f;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+.my-swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px; // عرض ثابت للسلايد
+  height: 300px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // لضمان ملء الصورة
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}

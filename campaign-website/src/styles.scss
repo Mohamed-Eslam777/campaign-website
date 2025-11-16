@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+body, html {
+  font-family: 'Cairo', sans-serif !important; // <-- تطبيق الخط الجديد
+  -webkit-font-smoothing: antialiased; // <-- لتنعيم الخطوط
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden; // (هذا السطر موجود من قبل لكن نؤكد عليه)
+  scroll-behavior: smooth;
+}
+
+// تحسين شكل العناوين والفقرات
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; // اجعل العناوين "بولد" بشكل افتراضي
+  line-height: 1.4; // تحسين المسافة بين السطور
+}
+
+p {
+  font-weight: 400; // اجعل الفقرات "عادية"
+  line-height: 1.7; // مسافة مريحة للعين في القراءة
+  font-size: 1.1rem; // تكبير الخط قليلاً لسهولة القراءة
+}

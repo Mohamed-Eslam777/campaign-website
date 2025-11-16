@@ -1,0 +1,36 @@
+<section class="testimonial-container" data-aos="fade-up">
+  <h2>شاركنا كلمة دعم</h2>
+  <p>رسالتك تمنحنا القوة. اكتب كلمة دعم للمرشح، وسيتم نشر أفضل الرسائل (بعد مراجعتها).</p>
+
+  <form [formGroup]="testimonialForm" (ngSubmit)="onSubmit()" class="testimonial-form">
+    <div class="form-group">
+      <label for="name">الاسم:</label>
+      <input id="name" type="text" formControlName="name" placeholder="اكتب اسمك" required>
+    </div>
+
+    <div class="form-group">
+      <label for="town">البلدة / القرية (اختياري):</label>
+      <input id="town" type="text" formControlName="town" placeholder="مثال: دسوق، فوه، مطوبس">
+    </div>
+
+    <div class="form-group">
+      <label for="message">رسالتك:</label>
+      <textarea id="message" formControlName="message" rows="5" placeholder="اكتب كلمة الدعم هنا..." required></textarea>
+      <div *ngIf="testimonialForm.get('message')?.invalid && testimonialForm.get('message')?.touched" class="error-msg">
+        الرسالة مطلوبة (10 حروف على الأقل).
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="testimonialForm.invalid || isSubmitting" class="submit-button">
+      {{ isSubmitting ? 'جاري الإرسال...' : 'إرسال الرسالة' }}
+    </button>
+  </form>
+
+  <div *ngIf="submitSuccess" class="alert alert-success">
+    شكراً لك! تم استلام رسالتك بنجاح.
+  </div>
+
+  <div *ngIf="submitError" class="alert alert-error">
+    حدث خطأ أثناء الإرسال. حاول مرة أخرى.
+  </div>
+</section>

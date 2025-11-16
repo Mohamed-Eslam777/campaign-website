@@ -1,0 +1,34 @@
+<section class="join-container" data-aos="fade-up">
+  <h2>انضم لحملتنا</h2>
+  <p>سجل بياناتك وكن جزءاً من فريق العمل لدعم المرشح.</p>
+
+  <form [formGroup]="joinForm" (ngSubmit)="onSubmit()" class="join-form">
+    <div class="form-group">
+      <label for="name">الاسم:</label>
+      <input id="name" type="text" formControlName="name" placeholder="اكتب اسمك كاملاً" required>
+      <div *ngIf="joinForm.get('name')?.invalid && joinForm.get('name')?.touched" class="error-msg">
+        الاسم مطلوب.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">رقم الهاتف:</label>
+      <input id="phone" type="tel" formControlName="phone" placeholder="اكتب رقم هاتفك" required>
+      <div *ngIf="joinForm.get('phone')?.invalid && joinForm.get('phone')?.touched" class="error-msg">
+        رقم هاتف صحيح مطلوب (10 أو 11 رقم).
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="joinForm.invalid || isSubmitting" class="submit-button">
+      {{ isSubmitting ? 'جاري الإرسال...' : 'انضم الآن' }}
+    </button>
+  </form>
+
+  <div *ngIf="submitSuccess" class="alert alert-success">
+    شكراً لانضمامك! تم إرسال بياناتك بنجاح.
+  </div>
+
+  <div *ngIf="submitError" class="alert alert-error">
+    حدث خطأ أثناء الإرسال. حاول مرة أخرى.
+  </div>
+</section>

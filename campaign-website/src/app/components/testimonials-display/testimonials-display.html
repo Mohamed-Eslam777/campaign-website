@@ -1,0 +1,22 @@
+<section class="display-container" data-aos="fade-up">
+  <h2>قالوا عن المرشح</h2>
+  <p>أقوى رسائل الدعم من أهالي الدائرة.</p>
+
+  <swiper-container
+    class="testimonial-swiper"
+    [slidesPerView]="1"
+    [spaceBetween]="30"
+    [loop]="true"
+    [autoplay]="{ delay: 4000, disableOnInteraction: false }"
+    [pagination]="{ clickable: true }"
+  >
+    <swiper-slide *ngFor="let item of testimonials">
+      <div class="testimonial-card">
+        <span class="quote-icon">"</span>
+        <p class="message">{{ item.message }}</p>
+        <h4 class="name">- {{ item.name }}</h4>
+        <span class="town">{{ item.town }}</span>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>

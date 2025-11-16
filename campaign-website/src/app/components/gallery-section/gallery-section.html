@@ -1,0 +1,23 @@
+<div class="gallery-container" data-aos="fade-up">
+  <h2>من قلب الحدث</h2>
+  <swiper-container
+    class="my-swiper"
+    [slidesPerView]="1"
+    [spaceBetween]="30"
+    [loop]="true"
+    [pagination]="{ clickable: true }"
+    [autoplay]="{ delay: 2500, disableOnInteraction: false }"
+    [effect]="'coverflow'"
+    [grabCursor]="true"
+    [centeredSlides]="true"
+    [coverflowEffect]="{ rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true }"
+    [breakpoints]="{
+      '640': { slidesPerView: 2 },
+      '1024': { slidesPerView: 3 }
+    }"
+  >
+    <swiper-slide *ngFor="let slide of slides">
+      <img [src]="slide.img" alt="صورة من جولات المرشح" />
+    </swiper-slide>
+  </swiper-container>
+</div>

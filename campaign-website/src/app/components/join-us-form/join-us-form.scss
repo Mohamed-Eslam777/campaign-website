@@ -1,0 +1,104 @@
+.join-container {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; // خلفية رمادية فاتحة
+  text-align: center;
+  overflow-x: hidden;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #0a192f;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+}
+
+.join-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: right; // للغة العربية
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; // هام
+    font-family: 'Cairo', sans-serif; // استخدام نفس الخط
+  }
+}
+
+.error-msg {
+  color: #D8000C; // لون أحمر للخطأ
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.submit-button {
+  background-color: #FFD700; // ذهبي
+  color: #0a192f; // كحلي
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.alert {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.alert-success {
+  background-color: #DFF2BF; // أخضر
+  color: #4F8A10;
+}
+
+.alert-error {
+  background-color: #FFBABA; // أحمر
+  color: #D8000C;
+}
+
+@media (max-width: 768px) {
+  .join-container {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .join-form {
+    text-align: center;
+  }
+}
+

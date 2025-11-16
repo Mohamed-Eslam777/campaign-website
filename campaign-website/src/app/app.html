@@ -1,0 +1,24 @@
+
+<ng-particles
+  [options]="particlesOptions"
+  (particlesLoaded)="particlesLoaded($any($event))"
+  (particlesInit)="particlesInit($any($event))"
+></ng-particles>
+
+<app-hero-section></app-hero-section>
+
+<app-about-section></app-about-section>
+
+<app-platform-section></app-platform-section>
+
+<app-gallery-section></app-gallery-section>
+
+<app-testimonials-display></app-testimonials-display>
+
+<app-testimonial-form></app-testimonial-form>
+
+<app-join-us-form></app-join-us-form>
+
+<app-footer-section></app-footer-section>
+
+<router-outlet />
