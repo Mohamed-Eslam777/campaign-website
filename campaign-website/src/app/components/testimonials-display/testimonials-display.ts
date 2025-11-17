@@ -38,6 +38,11 @@ export class TestimonialsDisplayComponent {
       message: "ندعم ونؤيد المهندس رزق مصطفى رقم 19",
       name: "محمد ياسين",
       town: "دسوق"
+    },
+    {
+      message: "كل الدعم والمساندة للمهندس رزق مصطفى",
+      name: "محمد ربيع مصطفى",
+      town: "دسوق (لاصيفر البلد)"
     }
   ];
 }
