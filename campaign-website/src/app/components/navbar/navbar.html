@@ -1,0 +1,24 @@
+<nav class="navbar" [class.open]="isMenuOpen">
+    <div class="navbar-container">
+      
+      <a href="#" class="nav-brand">المهندس / رزق مصطفى</a>
+  
+      <button class="nav-toggle" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+  
+      <div class="nav-links" [class.open]="isMenuOpen">
+        <ul>
+          <li><a href="#" (click)="toggleMenu()">الرئيسية</a></li>
+          <li><a href="#about" (click)="toggleMenu()">عن المرشح</a></li>
+          <li><a href="#platform" (click)="toggleMenu()">البرنامج</a></li>
+          <li><a href="#gallery" (click)="toggleMenu()">من قلب الحدث</a></li>
+          <li><a href="#testimonials" (click)="toggleMenu()">قالوا عنا</a></li>
+          <li><a href="#join" (click)="toggleMenu()">انضم لحملتنا</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </nav>

@@ -1,36 +1,44 @@
 .gallery-container {
   width: 100%;
-  padding: 4rem 1rem; // padding أقل على الجوانب
+  padding: 4rem 1.5rem; // <-- (!!!) الحل: هامش 1.5rem متساوي على الجوانب
   background-color: #fff;
   text-align: center;
   overflow-x: hidden;
+  box-sizing: border-box; // <-- (!!!) هام جداً: علشان الـ padding يتحسب صح
+}
 
-  h2 {
-    font-size: 2.5rem;
-    color: #0a192f;
-    margin-bottom: 2.5rem;
-    font-weight: 700;
-  }
+h2 {
+  font-size: 2.5rem;
+  color: #0a192f;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
 }
 
 .my-swiper {
-  width: 100%;
+  width: 100%; // <-- السلايدر هياخد 100% من (داخل الهامش)
   padding-top: 50px;
   padding-bottom: 50px;
+  box-sizing: border-box; // <-- (!!!) هام جداً
 }
 
 swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px; // عرض ثابت للسلايد
+  width: 300px; // عرض السلايد
   height: 300px;
+
+  /* (!!!) تصغير حجم السلايد سيكا في الموبايل علشان يناسب الهامش */
+  @media (max-width: 767px) {
+    width: 280px; 
+    height: 280px;
+  }
 
   img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; // لضمان ملء الصورة
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
 }

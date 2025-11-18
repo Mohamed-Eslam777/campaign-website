@@ -48,10 +48,9 @@
 }
 
 .card-icon {
-  font-size: 3rem;
-  color: #FFD700;
+  font-size: 3rem; // حجم الأيقونة
+  color: #FFD700; // (!!!) اللون الذهبي
   margin-bottom: 1rem;
-  display: block;
 }
 
 @media (max-width: 768px) {

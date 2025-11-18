@@ -5,6 +5,7 @@ import { AboutSection } from './components/about-section/about-section';
 import { PlatformSection } from './components/platform-section/platform-section';
 import { GallerySection } from './components/gallery-section/gallery-section';
 import { TestimonialsDisplayComponent } from './components/testimonials-display/testimonials-display';
+import { NavbarComponent } from './components/navbar/navbar';
 import { TestimonialFormComponent } from './components/testimonial-form/testimonial-form';
 import { JoinUsFormComponent } from './components/join-us-form/join-us-form';
 import { FooterSection } from './components/footer-section/footer-section';
@@ -22,6 +23,7 @@ import { loadSlim } from 'tsparticles-slim';
     AboutSection,
     PlatformSection,
     GallerySection,
+    NavbarComponent,
     TestimonialsDisplayComponent,
     TestimonialFormComponent,
     JoinUsFormComponent,
